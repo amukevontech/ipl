@@ -1,0 +1,395 @@
+{
+  "name": "BatsmanPerformance",
+  "plural": "BatsmanPerformances",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "rotobash",
+    "table": "batsman_performance"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": true,
+      "required": false,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "matchkey": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "matchKey",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "playerkey": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "playerKey",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "team": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "team",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "runsscored": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 27,
+      "scale": 0,
+      "mysql": {
+        "columnName": "runsScored",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 27,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "running": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "running",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "runsbyfour": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "runsByFour",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "runsbysix": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "runsBySix",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "wicket": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "wicket",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "totalfour": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 23,
+      "scale": 0,
+      "mysql": {
+        "columnName": "totalFour",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 23,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "totalsix": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 23,
+      "scale": 0,
+      "mysql": {
+        "columnName": "totalSix",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 23,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "percentrunsbyfour": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 4,
+      "mysql": {
+        "columnName": "percentRunsByFour",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "percentrunsbysix": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 4,
+      "mysql": {
+        "columnName": "percentRunsBySix",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "strikerate": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 34,
+      "scale": 4,
+      "mysql": {
+        "columnName": "strikeRate",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 34,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "percentballsfacedtohitboundary": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 31,
+      "scale": 4,
+      "mysql": {
+        "columnName": "percentBallsFacedToHitBoundary",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 31,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "percentrunsscoredinboundary": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 31,
+      "scale": 4,
+      "mysql": {
+        "columnName": "percentRunsScoredInBoundary",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 31,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "ballsfaced": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "ballsFaced",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5oversRunning": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5oversRunning",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5overs4s": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 26,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5overs4s",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 26,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5overs6s": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 26,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5overs6s",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 26,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5oversRunning": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5oversRunning",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5overs4s": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 26,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5overs4s",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 26,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5overs6s": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 26,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5overs6s",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 26,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "currentover": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "currentOver",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "currentoverstr": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 1,
+      "mysql": {
+        "columnName": "currentOverStr",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 1,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,484 @@
+{
+  "name": "BowlerPerformance",
+  "plural": "BowlerPerformances",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "rotobash",
+    "table": "bowler_performance"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "matchKey": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "match_key",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "playerKey": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "player_key",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "team": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "team",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "totalWickets": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "total_wickets",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "totalStumps": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "total_stumps",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "catches": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "catches",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "totalBalls": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "total_balls",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "totalOvers": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 16,
+      "scale": 0,
+      "mysql": {
+        "columnName": "total_overs",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 16,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "runs": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "runs",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "economy": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 29,
+      "scale": 4,
+      "mysql": {
+        "columnName": "economy",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 29,
+        "dataScale": 4,
+        "nullable": "Y"
+      }
+    },
+    "extras": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "extras",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "wide": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "wide",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "noball": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "noball",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "bye": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "bye",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "legbye": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "legbye",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "lbw": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "lbw",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "bowled": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "bowled",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "hitwicket": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "hitwicket",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "maiden": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "maiden",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "caughtBowled": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "caught_bowled",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5oversWickets": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5oversWickets",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5oversMaiden": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5oversMaiden",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5oversNoball": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5oversNoball",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "first5oversWideball": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "first5oversWideball",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5oversWickets": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5oversWickets",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5oversMaiden": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5oversMaiden",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5oversNoball": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5oversNoball",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "last5oversWideball": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "last5oversWideball",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "overStr": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 1,
+      "mysql": {
+        "columnName": "over_str",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 1,
+        "nullable": "Y"
+      }
+    },
+    "over": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "over",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

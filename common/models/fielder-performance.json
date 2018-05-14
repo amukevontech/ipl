@@ -1,0 +1,154 @@
+{
+  "name": "FielderPerformance",
+  "plural": "FielderPerformances",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "rotobash",
+    "table": "fielder_performance"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "matchKey": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "match_key",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "playerKey": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "player_key",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "team": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "team",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "catch": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "catch",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "runout": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "runout",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "stump": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 25,
+      "scale": 0,
+      "mysql": {
+        "columnName": "stump",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 25,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "overStr": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 1,
+      "mysql": {
+        "columnName": "over_str",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 1,
+        "nullable": "Y"
+      }
+    },
+    "over": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "over",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

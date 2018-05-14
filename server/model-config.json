@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "cricketapi": {
+    "dataSource": "cricketApi",
+    "public": true
+  },
+  "BatsmanScoreMatrix": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "BatsmanScores": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "BowlerScores": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "FielderScores": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "BatsmanPerformance": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "BowlerPerformance": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "FielderPerformance": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Leagues": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "ScoringMatrixParamTypes": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "ScoringMatrixParams": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "LeaguePoints": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Matches": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "MatchContests": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "PlayerPoints": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "MatchesPlayers": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Series": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "MatchStats": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Finalscores": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Users": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "UserTeams": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "UserTeamPlayers": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Players": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "CronStartMatch": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "MaxBash": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Maxbashscores": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "ContestParticipants": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "Configs": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "SeriesPlayers": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  },
+  "SeasonTeams": {
+    "dataSource": "mySQLDatasource",
+    "public": true
+  }
+}

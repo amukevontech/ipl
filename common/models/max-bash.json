@@ -1,0 +1,109 @@
+{
+  "name": "MaxBash",
+  "plural": "MaxBashes",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "rotobash",
+    "table": "max_bash"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "matchKey": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "match_key",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "playerKey": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "player_key",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "ballFaced": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 23,
+      "scale": null,
+      "mysql": {
+        "columnName": "ball_faced",
+        "dataType": "double",
+        "dataLength": null,
+        "dataPrecision": 23,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "nblfs": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 2,
+      "mysql": {
+        "columnName": "nblfs",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 2,
+        "nullable": "Y"
+      }
+    },
+    "blfs": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 23,
+      "scale": null,
+      "mysql": {
+        "columnName": "blfs",
+        "dataType": "double",
+        "dataLength": null,
+        "dataPrecision": 23,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

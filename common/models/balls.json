@@ -1,0 +1,48 @@
+{
+  "name": "balls",
+  "plural": "balls",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "pre_over": {
+      "type": "string",
+      "required": true
+    },
+    "next_over": {
+      "type": "string",
+      "required": true
+    },
+    "over": {
+      "type": {
+        "innings": {
+          "type": "number",
+          "required": true
+        },
+        "over": {
+          "type": "number",
+          "required": true
+        },
+        "balls": {
+          "type": "array",
+          "required": true
+        },
+        "team": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "balls": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

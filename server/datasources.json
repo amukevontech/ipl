@@ -1,0 +1,40 @@
+{
+  "cricketApi": {
+    "name": "cricketApi",
+    "baseURL": "https://rest.cricketapi.com/rest",
+    "crud": false,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "auth": [
+            "app_id"
+          ]
+        },
+        "template": {
+          "method": "POST",
+          "url": "https://rest.cricketapi.com/rest/v2/auth/",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "form": {
+            "access_key": "3475b10dad7c1fd2db845684b71e1f0e",
+            "secret_key": "af17b40ed75099415037424bc79b90fe",
+            "app_id": "{^app_id}",
+            "device_id": "abr344mkd99"
+          }
+        }
+      }
+    ]
+  },
+  "mySQLDatasource": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "rotobash",
+    "password": "123456",
+    "name": "mySQLDatasource",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

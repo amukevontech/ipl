@@ -1,0 +1,217 @@
+SELECT pp.id, pp.league_id,pp.match_key,pp.player_key,mp.player_fullname,mp.player_name,mp.match_type,mp.captain,mp.playing_role,
+mp.team,pp.score FROM player_points as pp  INNER JOIN matches_players as mp ON pp.match_key=mp.match_key GROUP by pp.player_key
+
+
+
+SELECT league_id, match_key, player_key, team, role, `status`, sum(score) as score FROM `player_points` GROUP BY player_key
+
+SELECT pp.league_id, pp.match_key, pp.player_key, pp.team, pp.role, pp.status, sum(pp.score) as score FROM `player_points` as pp GROUP BY pp.player_key
+
+
+SELECT pp.league_id, pp.match_key, pp.player_key, pp.team, pp.role, pp.status, sum(pp.score) as score FROM `player_points` as pp 
+INNER JOIN matches_players as mp ON mp.player_key=pp.player_key
+GROUP BY pp.player_key
+
+
+SELECT pp.league_id, pp.match_key,mp.player_name, pp.player_key, mp.captain, mp.team,mp.team_fullname, mp.playing_role as role, pp.status, sum(pp.score) as score FROM `player_points` as pp
+ INNER JOIN matches_players as mp ON mp.player_key=pp.player_key GROUP BY pp.player_key
+
+ SELECT pp.league_id, pp.match_key,mp.player_name, pp.player_key, mp.captain, mp.team,mp.team_fullname, mp.playing_role as role, pp.status, sum(pp.score) as score FROM `player_points` as pp
+ INNER JOIN matches_players as mp ON mp.player_key=pp.player_key and mp.match_key=pp.match_key GROUP BY pp.player_key
+
+
+
+
+
+
+5th March 2018
+
+SELECT pp.id, pp.league_id, pp.match_key, mp.player_name, pp.player_key, mp.captain, mp.team, mp.team_fullname, mp.playing_role AS role, pp.status, sum( pp.score ) AS score, ms.nonstriker_name, ms.striker_name, ms.batting_team_key, ms.current_over, ms.toss
+FROM `player_points` AS pp
+INNER JOIN matches_players AS mp ON ( mp.player_key = pp.player_key
+AND mp.match_key = pp.match_key )
+INNER JOIN match_stats AS ms ON ( ms.match_key = pp.match_key )
+GROUP BY pp.player_key
+
+
+
+ if(data.balls[item].batting_team=="a")
+
+
+ //   playerPoints.updateAll(
+                        //     {where:{matchKey: match_key}},
+                        //     {
+                        //       currentOver: overPlayed
+                        //     },function(err,results){
+                        //         if(err)
+                        //           throw(err)
+                        //     }
+                        // );
+
+
+/* function(data, next){
+                   // Current over update 
+                   var i = 0;
+                   async.each(data.over.balls,function(item,callback){
+                     
+                     playerPoints.updateAll(
+                          {matchKey: match_key},
+                          {
+                            currentOver: data.balls[item].over_str
+                          },function(err,result){
+                              if(err) throw err;
+
+                              i++;
+                        if(data.over.balls.length==i )
+                              next(null, data);
+                          }
+                      );
+
+
+
+
+                    });
+
+                    //next(null, results);
+                  },*/
+
+
+                        /*function(data, next){
+                    var i = 0, cstatus='active';
+                    async.each(data.over.balls,function(item,callback){
+                      if(data.balls[item].batting_team=="a"){
+                        playerPoints.updateAll({
+                          matchKey: match_key,
+                          team: 'b'
+                        },
+                        {
+                          currentStatus: 'inactive'
+                        },function(err,result){
+                          if(err) throw err;
+                          
+                          });
+                      }
+
+
+                      if(data.balls[item].bowler.wicket==1){
+                        console.log('out==>');
+                        console.log(data.balls[item].batsman.key);
+
+                        playerPoints.updateAll({
+                          matchKey: match_key,
+                          playerKey: data.balls[item].wicket
+                        },
+                        {
+                          currentStatus: 'inactive'
+                        },function(err,result){
+                          if(err) throw err;
+                          console.log('inactive');
+                          
+                          i++;
+                          if(data.over.balls.length==i )
+                                next(null, 'success');
+                          });
+
+                       }else{
+                        playerPoints.updateAll({
+                          matchKey: match_key,
+                          playerKey: data.balls[item].batsman.key
+                        },
+                        {
+                          currentStatus: 'active'
+                        },function(err,result){
+                          if(err) throw err;
+                          console.log('active');
+                          
+                          i++;
+                          if(data.over.balls.length==i )
+                                next(null, 'success');
+                          });
+                       }
+                      
+                    });
+                  }*/
+
+
+
+//app.io.emit('listPlayerPoints', {data: 'hello'});
+
+      /*socket.on('listPlayerPoints', function(msg){
+        console.log('listPlayerPoints triggered: ');
+        console.log(msg);
+        var finalData = {};
+        var players=[];  
+        var batting='';
+        var currentover='';
+
+        var finalscores = app.models.Finalscores;  
+        finalscores.find({
+          where:{league_id: 3}
+        },function(err, rows){
+          for(var i=0;i<rows.length;++i){ 
+            batting = rows[i].battingTeamKey;
+            currentover = rows[i].currentOver;
+            players.push({
+                player_key: rows[i].playerKey,
+                player_name: rows[i].playerName,
+                striker_name: rows[i].strikerName,
+                nonstriker_name: rows[i].nonstrikerName,
+                team_name: rows[i].team,
+                role: rows[i].role,
+                status: rows[i].status,
+                score: rows[i].score
+            });
+        }
+
+        finalData = {response:
+          {
+            batting: batting, 
+            overPlayed: currentover, 
+            yourScore: 100, 
+            topTeamScore:100, 
+            currentPosition: 2,
+            expectedPoints: 400,
+            players: players
+          }};
+
+        console.log(finalData);
+        app.io.emit('listPlayerPoints', finalData);
+      });
+      });*/
+
+
+
+
+     /* socket.on('listPlayerPoints', function(){
+        console.log('listPlayerPoints triggered: ');
+        var playerPoints = app.models.PlayerPoints;
+        var finalData = {};
+        var players=[];
+        
+        playerPoints.find({
+        }, function(err, rows){
+            for(var i=0;i<rows.length;++i){ 
+                players.push({
+                    player_key: rows[i].playerKey,
+                    player_name:'player',
+                    team: rows[i].team,
+                    role: rows[i].role,
+                    status: rows[i].status,
+                    score: rows[i].score
+                });
+            }
+            finalData = {response:
+              {
+                batting: 'KKR', 
+                overPlayed: '10.5', 
+                yourScore: 100, 
+                topTeamScore:100, 
+                currentPosition: 1,
+                expectedPoints: 500,
+                players: players
+              }};
+            console.log(finalData);      
+            app.io.emit('listPlayerPoints', finalData);
+
+        });
+      });*/                  
